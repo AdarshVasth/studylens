@@ -1,0 +1,9 @@
+CPU scheduling selects a ready process to run on the CPU. The short-term scheduler chooses from the ready queue and runs very frequently. First Come First Served (FCFS) is non-preemptive and runs processes in arrival order. Round Robin gives each process a fixed time quantum and is preemptive. A small quantum improves responsiveness but increases context-switch overhead.
+---
+A context switch saves the CPU state of the current process and restores the saved state of another process. Saved state includes registers, the program counter, and scheduling information in the process control block. Context switches may follow a timer interrupt, blocking I/O, or a higher-priority process becoming ready. Context-switch time is overhead because no user process makes progress during the switch.
+---
+A deadlock occurs when processes wait forever for resources held by one another. The four necessary conditions are mutual exclusion, hold and wait, no preemption, and circular wait. Deadlock prevention breaks at least one condition. Deadlock avoidance checks that resource allocation leaves the system in a safe state; the Banker's algorithm is one example.
+---
+Virtual memory lets a process use a logical address space larger than physical RAM. Paging divides virtual memory into fixed-size pages and physical memory into frames. A page table maps pages to frames. A page fault occurs when a required page is absent from RAM, causing the operating system to load it from secondary storage. Excessive page faults can cause thrashing.
+---
+Turnaround time equals completion time minus arrival time. Waiting time equals turnaround time minus CPU burst time for the usual single-burst scheduling exercise. Response time equals the first CPU start time minus arrival time. Waiting time measures time spent waiting in the ready queue; response time measures how quickly a process first receives CPU service.
